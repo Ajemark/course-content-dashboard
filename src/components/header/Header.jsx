@@ -102,6 +102,8 @@ const Header = ({ openSideBar }) => {
   }, []);
 
 
+
+
   const connectNearWallet = (walletConnection) => {
     walletConnection.requestSignIn(
       "healthgo_admin_dashboard", // contract requesting access
@@ -110,7 +112,6 @@ const Header = ({ openSideBar }) => {
       "localhost:3000" // optional redirect URL on failure
     );
   };
-
 
   const handleConnect = async () => {
 
@@ -220,20 +221,15 @@ const Header = ({ openSideBar }) => {
             />
           </div> */}
           <div
-            style={{ maxWidth: "300px", cursor: "pointer", marginTop: "0px" }}
-            className="signout"
+            className="p-3 rounded-lg mr-[55px] w-auto cursor-pointer border-primary border-3"
             onClick={handleConnect}
           >
-            <div className="text-primary list" style={{ maxWidth: "300px" }}>
-              <TextTruncate
-                line={1}
-                element="span"
-                truncateText="…"
-                text={signedIn}
-              />
+            <div className="text-primary flex align-center items-center">
+              <span className="mr-3" >{signedIn}</span>
               <BoxArrowRight size={20} />
             </div>
           </div>
+
           {/* <Navbar.Text
             className="text-primary"
             onClick={async () => {
