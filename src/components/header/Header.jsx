@@ -115,7 +115,6 @@ const Header = ({ openSideBar }) => {
 
   const handleConnect = async () => {
 
-    console.log('runnubg')
     async function check() {
       if (!connected) {
         setSelected(null)
@@ -206,9 +205,9 @@ const Header = ({ openSideBar }) => {
         </CHeaderToggler>
 
         <Navbar.Brand>
-          <Link to="/" className="link text-primary">
+          <Link to="/" className="link flex items-center text-primary">
             <Image src={logo} />
-            HealthGo Admin Dashboard
+            <p className="">HealthGo Admin Dashboard</p>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle />
@@ -221,7 +220,7 @@ const Header = ({ openSideBar }) => {
             />
           </div> */}
           <div
-            className="p-3 rounded-lg mr-[55px] w-auto cursor-pointer border-primary border-3"
+            className="p-2 rounded-lg mr-[55px] w-auto cursor-pointer border-primary border-3"
             onClick={handleConnect}
           >
             <div className="text-primary flex align-center items-center">
